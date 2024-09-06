@@ -61,7 +61,8 @@ class LyzrAgent:
             "message": message
         })
 
-        url = self.url + "chat/"
+        url = str(self.url) + "chat/"
+        print(url)
 
         response = requests.post(url, headers=self.headers, data=payload)
 
